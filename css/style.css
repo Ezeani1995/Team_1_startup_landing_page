@@ -1,0 +1,377 @@
+/*==========================================================================================
+                    GLOBAL STYLES
+========================================================================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  src: url(../Montserrat-Regular.ttf);
+  font-family: Montserrat;
+}
+
+:root {
+  --primaryColor: #4caf50;
+  --textColor: #444;
+  --bodyBackground: #fff;
+  --secondaryBackground: #f9f9f9;
+  --errorMessageColor: #f00;
+}
+
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(../img/hero.jpg) no-repeat center center/cover;
+  overflow-x: hidden;
+  position: relative;
+  color: var(--textColor);
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+/*============================================================================================
+                                    HEADER SECTION
+==========================================================================================*/
+.header {
+  position: relative;
+  padding: 20px 0;
+}
+
+.header i {
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: none;
+}
+
+.header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav ul {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.header nav ul li a:hover {
+  color: #0066cc;
+}
+
+.header img {
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+}
+
+/*============================================================================================
+                                    HERO SECTION
+==========================================================================================*/
+.hero {
+  text-align: center;
+  padding: 50px 0 100px;
+}
+
+.hero .hero-inner {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.hero h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #0066cc;
+  margin-bottom: 30px;
+}
+
+.hero small {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.hero .time-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.hero .time-grid > div {
+  border-right: 1px solid #ccc;
+  text-align: center;
+  flex-basis: 25%;
+}
+
+.hero .time-grid > div:last-child {
+  border-right: 0;
+}
+
+.hero .time-grid h2 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 30px auto;
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.hero .newsletter {
+  width: 70%;
+  margin: 0 auto 50px;
+  background: rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+
+.hero .newsletter > * {
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.hero .newsletter input {
+  flex-basis: 70%;
+  background: transparent;
+  padding: 0 15px;
+  color: #333;
+  font-weight: 500;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 16px;
+}
+
+.hero .newsletter button {
+  flex-basis: 30%;
+  background: #0066cc;
+  color: #fff;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hero .newsletter button:hover {
+  background: #004d99;
+  cursor: pointer;
+}
+
+.hero .social-media-icons {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .social-media-icons i {
+  font-size: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero .social-media-icons i:hover {
+  transform: translateY(-5px);
+}
+
+.hero .social-media-icons .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.hero .social-media-icons .fa-twitter:hover {
+  color: #55acee;
+}
+
+.hero .social-media-icons .fa-google-plus-g:hover {
+  color: #dc4e41;
+}
+
+.hero .social-media-icons .fa-linkedin-in:hover {
+  color: #0077b5;
+}
+
+.hero .social-media-icons .fa-globe:hover {
+  color: orange;
+}
+
+.hero .social-media-icons .fa-instagram:hover {
+  color: #3f729b;
+}
+
+/*============================================================================================
+                                    MEDIA QUERIES SECTION
+==========================================================================================*/
+@media (max-width: 768px) {
+  .header img {
+    max-width: 150px;
+  }
+
+  .header .fa-bars {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .header.clicked .fa-bars {
+    display: none;
+  }
+
+  .header.clicked .fa-times {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .header .header-inner nav {
+    display: none;
+    transform: translateX(-200px);
+    transition: transform 50s linear;
+  }
+
+  .header.clicked .header-inner nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    transform: translateX(0);
+    padding: 150px 50px;
+  }
+
+  .header.clicked .header-inner nav ul {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header.clicked .header-inner nav ul li {
+    margin-bottom: 50px;
+  }
+
+  .header.clicked .header-inner nav ul li a {
+    color: #fff;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero h3,
+  .hero p {
+    width: 100%;
+  }
+
+  .hero .hero-inner {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .hero h3 {
+    font-size: 17px;
+  }
+
+  .hero small {
+    font-size: 10px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero .newsletter {
+    width: 100%;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero .newsletter > * {
+    width: 100%;
+    height: 50px;
+    display: block;
+  }
+
+  .hero .newsletter input {
+    background: rgba(0, 0, 0, 0.16);
+    margin-bottom: 15px;
+    padding: 20px 10px;
+  }
+
+  .hero .newsletter button {
+    padding: 15px 0;
+  }
+
+  .hero .social-media-icons {
+    width: 90%;
+  }
+
+  .hero .social-media-icons i {
+    margin: 0 10px;
+  }
+}
